@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.howl {
+  border: 1px solid pink;
+}

@@ -6,9 +6,12 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
+    "audiosprite": "^0.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-howler": "^5.0.0",
     "react-scripts": "4.0.2",
+    "startaudiocontext": "^1.2.1",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
@@ -34,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "howler": "^2.2.1",
+    "rehowl": "^0.6.0"
   }
 }
