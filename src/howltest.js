@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
 import { useHowl, Play } from 'rehowl';
 import sample from './sounds/md-sprite-16.webm';
+import sprite128 from './sprite128';
+import oneTwoEight from './128';
 
 let TestHowl = () => {
   const [digit, setDigit] = useState(0);
@@ -11,77 +13,12 @@ let TestHowl = () => {
   let counter = 0;
   const { howl, state } = useHowl({
     src: [sample],
-      sprite: {
-        1: [
-           0,
-          2711.8367346938776
-        ],
-        2: [
-          4000,
-          1209.9092970521542
-        ],
-            3: [
-              7000,
-              2003.90022675737
-            ],
-            4: [
-              11000,
-              5777.301587301587
-            ],
-            5: [
-              18000,
-              4366.439909297053
-            ],
-            6: [
-              24000,
-              2828.752834467121
-            ],
-            7: [
-              28000,
-              3621.519274376418
-            ],
-            8: [
-              33000,
-              1391.7233560090735
-            ],
-            9: [
-              36000,
-              1084.6712018140606
-            ],
-            10: [
-              39000,
-              1084.6938775510182
-            ],
-            11: [
-              42000,
-              780.1587301587318
-            ],
-            12: [
-              44000,
-              884.7392290249445
-            ],
-            13: [
-              46000,
-              1507.3469387755126
-            ],
-            14: [
-              49000,
-              841.9047619047647
-            ],
-            15: [
-              51000,
-              884.9886621315193
-            ],
-            16: [
-              53000,
-              3927.165532879819
-            ]
-          },
+      sprite: sprite128,
         })
         return (
           <div>
            <div className='howl-div'>
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(dig => (
+                {oneTwoEight.map(dig => (
                 <button className='howl-button'
                     key={counter++}
                     onMouseEnter={() => {
@@ -132,3 +69,5 @@ let TestHowl = () => {
 
 
 export default TestHowl;
+
+// chop-1.wav chop-11.wav chop-120.wav chop-2.wav chop-30.wav chop-41.wav chop-52.wav chop-63.wav chop-74.wav chop-85.wav chop-96.wav chop-10.wav chop-110.wav chop-121.wav chop-20.wav chop-31.wav chop-42.wav chop-53.wav chop-64.wav chop-75.wav chop-86.wav chop-97.wav chop-100.wav chop-111.wav chop-122.wav chop-21.wav chop-32.wav chop-43.wav chop-54.wav chop-65.wav chop-76.wav chop-87.wav chop-98.wav chop-101.wav chop-112.wav chop-123.wav chop-22.wav chop-33.wav chop-44.wav chop-55.wav chop-66.wav chop-77.wav chop-88.wav chop-99.wav chop-102.wav chop-113.wav chop-124.wav chop-23.wav chop-34.wav chop-45.wav chop-56.wav chop-67.wav chop-78.wav chop-89.wav chop-103.wav chop-114.wav chop-13.wav chop-24.wav chop-35.wav chop-46.wav chop-57.wav chop-68.wav chop-79.wav chop-9.wav chop-104.wav chop-115.wav chop-14.wav chop-25.wav chop-36.wav chop-47.wav chop-58.wav chop-69.wav chop-8.wav chop-90.wav chop-105.wav chop-116.wav chop-15.wav chop-26.wav chop-37.wav chop-48.wav chop-59.wav chop-7.wav chop-80.wav chop-91.wav chop-106.wav chop-117.wav chop-16.wav chop-27.wav chop-38.wav chop-49.wav chop-6.wav chop-70.wav chop-81.wav chop-92.wav chop-107.wav chop-118.wav chop-17.wav chop-28.wav chop-39.wav chop-5.wav chop-60.wav chop-71.wav chop-82.wav chop-93.wav chop-108.wav chop-119.wav chop-18.wav chop-29.wav chop-4.wav chop-50.wav chop-61.wav chop-72.wav chop-83.wav chop-94.wav chop-109.wav chop-12.wav chop-19.wav chop-3.wav chop-40.wav chop-51.wav chop-62.wav chop-73.wav chop-84.wav chop-95.wav
