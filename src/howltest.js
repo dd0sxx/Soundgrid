@@ -79,10 +79,10 @@ let TestHowl = () => {
           },
         })
         return (
-          <>
-           <div>
+          <div>
+           <div className='howl-div'>
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(dig => (
-                <button
+                <button className='howl-button'
                     key={counter++}
                     onMouseEnter={() => {
                       if (mouseDown) {
@@ -118,7 +118,7 @@ let TestHowl = () => {
                   key={counter++}
                   pause={!mouseDown}
                   loop={loop}
-                  fade={mouseDown ? [0, 1, 1000] :[1, 0, 1000]}
+                  fade={mouseDown ? [0, 1, 250] :[1, 0, 1000]}
                   // onFade={() => setFading(false)}
                 >
                 </Play> 
@@ -126,7 +126,7 @@ let TestHowl = () => {
                 <> </>
               ))}
             </div>
-          </>
+          </div>
         )
 }
 
