@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import { useHowl, Play } from 'rehowl';
-import sample from './sounds/md-sprite-16.webm';
+import sample from './sounds/sprite124.webm';
 import sprite128 from './sprite128';
 import oneTwoEight from './128';
 
@@ -19,13 +19,17 @@ let TestHowl = () => {
           <div>
            <div className='howl-div'>
                 {oneTwoEight.map(dig => (
-                <button className='howl-button'
+                <div className='howl-button'
                     key={counter++}
                     onMouseEnter={() => {
                       if (mouseDown) {
-                        let lastDigit = digits[digits.length - 1];
-                        lastDigit ?
-                        setDigits([lastDigit, dig]) :
+                        setDigit(dig);
+                        let lastDigits = [...digits];
+                        if (lastDigits.length > 3) {
+                          lastDigits = lastDigits.slice(-3);
+                        }
+                        lastDigits ?
+                        setDigits([...lastDigits, dig]) :
                         setDigits([dig])
                       }
                     }}
@@ -38,16 +42,19 @@ let TestHowl = () => {
                     setLoop(false);
                     setMouseDown(false);
                     setFading(true);
-                    setDigits([]);
+                    setTimeout(() => {
+                      if (!mouseDown) {
+                        setDigits([]);
+                      }
+                    },2000)
                     })}
                 >
-                {dig}
-                </button>
+                </div>
                 ))}
             </div>
             <div className='howl'>
               {digits.map((dig) => (
-                mouseDown ?
+                // mouseDown ?
                 // {/* && dig === digit ? */}
                 <Play
                   howl={howl}
@@ -55,12 +62,12 @@ let TestHowl = () => {
                   key={counter++}
                   pause={!mouseDown}
                   loop={loop}
-                  fade={mouseDown ? [0, 1, 250] :[1, 0, 1000]}
+                  fade={mouseDown ? [0, 1, 250] :[1, 0, 2000]}
                   // onFade={() => setFading(false)}
                 >
                 </Play> 
-                :
-                <> </>
+                // :
+                // <> </>
               ))}
             </div>
           </div>
