@@ -1,5 +1,6 @@
 body {
-  margin: 0px;;
+  margin: 0px;
+  overflow: hidden;
 }
 
 .App {
@@ -7,6 +8,7 @@ body {
 }
 
 body {
+  cursor: none;
 }
 
 .App-header {
@@ -25,12 +27,31 @@ body {
 }
 
 .howl-button {
-  width: 6.25%;
-  height: 12.4;
+  width: 6.125%;
+  height: 12.3%;
+  border: 1px solid pink;
 }
 .howl-div {
+  position: absolute;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
+  z-index: 1;
+}
+
+.background-div {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.p5circle {
+}
+
+.p5canvas {
+  background-color: rebeccapurple;
+  width: 100vw;
+  height: 100vh;
 }
