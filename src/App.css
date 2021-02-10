@@ -1,6 +1,13 @@
 body {
   margin: 0px;
   overflow: hidden;
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 100;
 }
 
 .App {
@@ -8,7 +15,7 @@ body {
 }
 
 body {
-  cursor: none;
+
 }
 
 .App-header {
@@ -29,7 +36,6 @@ body {
 .howl-button {
   width: 6.125%;
   height: 12.3%;
-  border: 1px solid pink;
 }
 .howl-div {
   position: absolute;
