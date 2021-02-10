@@ -6,34 +6,29 @@ import mesh from './mesh';
 import {useEffect, useState} from 'react';
 
 function App() {
-  const [effect, setEffect] = useState(0);
+  const [effect, setEffect] = useState(null);
 
-  const changeEffect = () => {effect === 0 ? setEffect(1) : setEffect(0);}
+  const changeEffect = (e) => {setEffect(e.target.id)}
 
   return (
     <div className="App">
       <h1>Click Around!</h1>
-      <button onClick={changeEffect}>Change Effects</button>
-      {/* <header className="App-header"> */}
+      <button id='mesh' onClick={changeEffect}>mesh</button>
+      <button id='circles' onClick={changeEffect}>circles</button>
       <div className='background-div'>
-        {/* <BgGraphics /> */}
-        <>
-        <div className='bg-image'></div>
-        {effect === 0  ? 
+        {effect === 'mesh'  ? 
         <P5Wrapper 
-        // sketch={sketch} 
         sketch={mesh} 
-        /> :
+        /> : <></> }
+        { effect === 'circles'  ? 
         <P5Wrapper 
         sketch={sketch} 
-        />
+        /> :  <></>
       }
-        </>
       </div>
         <div className='sound-grid'>
         <SoundGrid />
         </div>
-      {/* </header> */}
     </div>
   );
 }
