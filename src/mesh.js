@@ -24,17 +24,26 @@ export default function mesh(p){
     p.draw = () => {
         flying -= 0.1;
         let xoff = flying;
+         
         for (let x = 0; x < cols; x++) {
             let yoff = 0;
               for (let y = 0; y < rows; y++) {
-                      terrain[y][x] = p.map(p.noise(xoff, yoff), 0, 1, -150, 150);
+                if (p.mouseIsPressed) {
+                  terrain[y][x] = p.map(p.noise(xoff, yoff), 0, 1, -300, 300);
+                } else {
+                      terrain[y][x] = p.map(p.noise(xoff, yoff), 0, 1, -100, 100);
+                    }
                       yoff += 0.15;
                   }
                   xoff += 0.15;
                 }
 
         p.background(0);
+        if (p.mouseIsPressed) {
+        p.stroke(p.map(p.noise(flying * 4, flying * 4), 0, 1, -50, 255), p.map(p.noise(flying * 4, flying * 4), 0, 1, -50, 255), p.map(p.noise(flying + 4, flying + 40), 0, 1, -50, 255))
+      } else {
         p.stroke(255);
+      }
         p.noFill();
         p.translate(w / 6, h / 2);
         p.translate(-w / 2 + 50, -h / 1.25 - 50);
