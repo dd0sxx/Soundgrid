@@ -1,5 +1,5 @@
 import './App.css';
-import TestHowl from './howltest';
+import SoundGrid from './SoundGrid';
 import P5Wrapper from 'react-p5-wrapper';
 import sketch from './sketch';
 import mesh from './mesh';
@@ -31,7 +31,7 @@ function App() {
         </>
       </div>
         <div className='sound-grid'>
-        <TestHowl />
+        <SoundGrid />
         </div>
       {/* </header> */}
     </div>
