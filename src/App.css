@@ -27,14 +27,6 @@ header {
   z-index: 2;
 }
 
-header img {
-  position: absolute;
-  margin:auto;
-  margin-top: 85vh;
-  max-width: 10vw;
-  max-height: 10vh;
-}
-
 h1 {
   color: white;
   font-family: 'Courier New', Courier, monospace;

@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <header>
-      <img src={logo} unselectable="on"/>
       <h1 unselectable="on">Enable your microphone and Click Around! the audio is used reactively with the graphics ^__^ </h1>
       <h3 unselectable="on"> If you see nothing after clicking on circles or mesh, try refreshing. Sometimes the audio bins don't load properly </h3>
       <button id='mesh' onClick={changeEffect} unselectable="on">mesh</button> 
