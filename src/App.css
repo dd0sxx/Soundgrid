@@ -1,3 +1,16 @@
+*.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body {
   margin: 0px;
   overflow: hidden;
@@ -5,22 +18,34 @@ body {
 }
 
 header {
-  margin: 2%;
+  margin: auto;
+  width: 100vw;
   margin-left: 4%;
   margin-right: 4%;
   position: absolute;
+  margin-top:2%;
   z-index: 2;
+}
+
+header img {
+  position: absolute;
+  margin:auto;
+  margin-top: 85vh;
+  max-width: 10vw;
+  max-height: 10vh;
 }
 
 h1 {
   color: white;
   font-family: 'Courier New', Courier, monospace;
+  font-size: large;
   font-weight: 100;
 }
 h3 {
   color: white;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 100;
+  font-size: medium;
 }
 
 .App {
