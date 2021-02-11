@@ -4,7 +4,20 @@ body {
   background-color: black;
 }
 
+header {
+  margin: 2%;
+  margin-left: 4%;
+  margin-right: 4%;
+  position: absolute;
+  z-index: 2;
+}
+
 h1 {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 100;
+}
+h3 {
   color: white;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 100;
@@ -15,23 +28,9 @@ h1 {
 }
 
 body {
-
+  cursor: crosshair;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 .howl-button {
   width: 6.125%;
@@ -51,9 +50,6 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-}
-
-.p5circle {
 }
 
 .p5canvas {
